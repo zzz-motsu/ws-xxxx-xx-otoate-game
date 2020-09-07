@@ -32,11 +32,29 @@ body {
   align-items: center;
 }
 
+.is-hidden {
+  display: none
+}
+
 .main-screen {
   padding: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button {
+  cursor: pointer;
+  background: white;
+  border: 1px solid #00000090;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.button:hover {
+  background: #000000;
+  color: white;
 }
 
 .play {
@@ -59,7 +77,7 @@ body {
 }
 
 .input {
-  border-raduis: 8px;
+  border-radius: 8px;
   padding: 8px;
   margin: 8px;
   border: 1px solid #00000090;
@@ -72,6 +90,10 @@ body {
   border-radius: 8px;
   height: 48px;
   width: 48px;
+}
+
+.center {
+  justify-content: center;
 }
 
 .space-evenly {
