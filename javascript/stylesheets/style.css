@@ -50,7 +50,7 @@ p {
 .button {
   cursor: pointer;
   background: white;
-  border: 1px solid #00000090;
+  border: 1px solid black;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
@@ -64,19 +64,24 @@ p {
 .play {
   cursor: pointer;
   background: white;
+  color: #00000090;
   border: 0;
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
   border-radius: 2.5rem;
-  border: 2px solid #00000090;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.play:hover {
+  background: black;
+  color: white;
+}
+
 .play-logo {
-  color: #00000090;
 }
 
 .input {
@@ -89,7 +94,7 @@ p {
 .sound {
   cursor: pointer;
   background: white;
-  border: 1px solid #00000090;
+  border: 2px solid black;
   border-radius: 8px;
   margin: 4px;
   height: 48px;
