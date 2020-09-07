@@ -1,0 +1,79 @@
+html {
+  font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Sans-Serif;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 320px;
+}
+
+.row {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-screen {
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play {
+  cursor: pointer;
+  background: white;
+  border: 0;
+  font-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 2.5rem;
+  box-shadow: 0px 0px 2px 2px #00000070, -2px -2px 1px 1px #00000021;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-logo {
+  color: #00000090;
+}
+
+.input {
+  border-raduis: 8px;
+  padding: 8px;
+  margin: 8px;
+  border: 1px solid #00000090;
+}
+
+.sound {
+  cursor: pointer;
+  background: white;
+  border: 1px solid #00000090;
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
