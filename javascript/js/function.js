@@ -9,10 +9,12 @@ const context = {
   playerNameElement: document.querySelector('.player-name'),
   playerElement: document.querySelector('#player'),
   playButton: document.querySelector('.play'),
+  restartButton: document.querySelector('.restart'),
   startButton: document.querySelector('.start-button'),
   scaleButtons: document.querySelectorAll('.sound'),
   scoreText: document.querySelector('.score'),
   answerCount: document.querySelector('.answer-count'),
+  finalScore: document.querySelector('.final-score'),
   scoreList: document.querySelector('.score-list'),
   scenes: {
     start: document.querySelector('.start-scene'),
@@ -104,15 +106,16 @@ const onLoadGameScene = () => {
 
   scaleButtons.forEach(item => {
     item.addEventListener('click', (e) => {
-      if (context.count > PROBLEM_COUNT) {
-        moveToResult()
-        return
-      }
       const ans = e.target.getAttribute('data-key')
       document.getElementById(ans).play()
       if (checkAnswer(ans)) {
-        makeQuestion()
         incrementCount()
+        if (context.count > PROBLEM_COUNT) {
+          moveToResult()
+          return
+        }
+
+        makeQuestion()
         updateAnswerCount()
       }
     })
@@ -120,10 +123,15 @@ const onLoadGameScene = () => {
 }
 
 const onLoadResultScene = async () => {
+  const { score, playerName, finalScore, restartButton } = context
+  restartButton.addEventListener('click', () => {
+    location.reload()
+  })
+  finalScore.innerText = score
   try {
     const record = await createScore({
-      name: context.playerName,
-      score: context.score
+      name: playerName,
+      score: score
     })
     const data = await fetchScoreList()
     data.forEach((item, index) => {
