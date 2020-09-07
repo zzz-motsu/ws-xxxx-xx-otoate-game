@@ -13,6 +13,7 @@ const context = {
   scaleButtons: document.querySelectorAll('.sound'),
   scoreText: document.querySelector('.score'),
   answerCount: document.querySelector('.answer-count'),
+  scoreList: document.querySelector('.score-list'),
   scenes: {
     start: document.querySelector('.start-scene'),
     game: document.querySelector('.game-scene'),
@@ -118,8 +119,51 @@ const onLoadGameScene = () => {
   })
 }
 
-const onLoadResultScene = () => {
-
+const onLoadResultScene = async () => {
+  try {
+    const record = await createScore({
+      name: context.playerName,
+      score: context.score
+    })
+    const data = await fetchScoreList()
+    data.forEach((item, index) => {
+      const li = document.createElement('li')
+      li.classList.add('score-item')
+      li.innerHTML = `
+        <div>
+          <p>
+            ${index+1}. ${item.name}
+          </p>
+        </div>
+        <div class="score-result">
+          <p>
+            ${item.score}
+          </p>
+        </div>
+      `
+      if (item._id === record._id) {
+        li.classList.add('current')
+      }
+      context.scoreList.appendChild(li)
+    })
+  } catch (e) {
+    console.error(e)
+  }
 }
+
+const fetchScoreList = async () => {
+  const data = await fetch('http://localhost:3000/scores')
+  return await data.json()
+}
+
+const createScore = async (params) => {
+  const data = await fetch('http://localhost:3000/scores', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(params)
+  })
+  return await data.json() }
 
 subscribe()

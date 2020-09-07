@@ -99,3 +99,18 @@ body {
 .space-evenly {
   justify-content: space-evenly;
 }
+
+.score-list-container {
+  height: 200px;
+  overflow: scroll;
+}
+
+.score-list {
+  padding: 0;
+  margin: 0;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+}

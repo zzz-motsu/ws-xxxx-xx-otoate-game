@@ -9,6 +9,13 @@ const port = 3000
 
 const scoresPath = '/scores'
 
+// CORSを許可する
+app.use(function(_req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -51,7 +58,7 @@ app.get('/', function (_req, res) {
 })
 
 app.get(scoresPath, function (_req, res) {
-  Score.find({}, function (err, result) {
+  Score.find({}).sort({ score: - 1 }).exec(function (err, result) {
     if (err) {
       throw err
     }
@@ -65,7 +72,7 @@ app.post(scoresPath, function (req, res) {
     if (err) {
       throw err
     }
-    res.status(201).json()
+    res.status(201).json(score)
   })
 })
 
