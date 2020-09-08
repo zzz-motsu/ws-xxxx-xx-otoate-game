@@ -76,7 +76,7 @@ const checkAnswer = (ans) => {
     context.score += 200
     document.getElementById(ans).play()
   } else {
-    context.score = Math.max(score - 30, 0)
+    context.score = Math.max(score - 100, 0)
     wrongAudio.play()
   }
   updateScore()
