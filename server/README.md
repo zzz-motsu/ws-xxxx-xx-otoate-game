@@ -31,4 +31,5 @@ $ brew services start mongodb-community
 ## 補足記事
 
 - [mongoose | 公式](https://mongoosejs.com/docs/index.html)
+- [Node.js用MongoDBライブラリ mongooseの基本操作まとめ（すぐ試せるサンプル付き）](https://qiita.com/takehilo/items/4b89f8ee432b0a06c691)
 - [node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
