@@ -1,6 +1,6 @@
 ## Web API(サーバサイド課題）
 
-デモ: 
+デモ: https://version1-workspace.github.io/ws-xxxx-xx-otoate-game/front-js/
 
 Expressを使用した簡易的なWeb APIを作成してフロントエンドとサーバサイドの接続を勉強するためのリポジトリです。
 上記デモをみながらなるべく同じサイトができるように実装をお願いします。
