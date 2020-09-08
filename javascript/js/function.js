@@ -59,8 +59,10 @@ const checkAnswer = (ans) => {
   const { score, answer } = context
   if (soundFiles[answer] === ans) {
     context.score += 200
+    document.getElementById(ans).play()
   } else {
     context.score = Math.max(score - 30, 0)
+    document.querySelector('#wrong').play()
   }
   updateScore()
   return soundFiles[answer] === ans
@@ -107,7 +109,6 @@ const onLoadGameScene = () => {
   scaleButtons.forEach(item => {
     item.addEventListener('click', (e) => {
       const ans = e.target.getAttribute('data-key')
-      document.getElementById(ans).play()
       if (checkAnswer(ans)) {
         incrementCount()
         if (context.count > PROBLEM_COUNT) {
@@ -151,6 +152,12 @@ const onLoadResultScene = async () => {
       `
       if (item._id === record._id) {
         li.classList.add('current')
+        setTimeout(() => {
+          li.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          })
+        }, 500)
       }
       context.scoreList.appendChild(li)
     })

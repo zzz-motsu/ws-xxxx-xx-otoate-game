@@ -50,34 +50,34 @@ p {
 .button {
   cursor: pointer;
   background: white;
-  border: 1px solid black;
+  border: 1px solid #2b2b2b;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
 }
 
 .button:hover {
-  background: #000000;
+  background: #2b2b2b;
   color: white;
 }
 
 .play {
   cursor: pointer;
   background: white;
-  color: #00000090;
+  color: #2b2b2b;
   border: 0;
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
   border-radius: 2.5rem;
-  border: 2px solid black;
+  border: 2px solid #2b2b2b;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .play:hover {
-  background: black;
+  background: #2b2b2b;
   color: white;
 }
 
@@ -88,13 +88,13 @@ p {
   border-radius: 8px;
   padding: 8px;
   margin: 8px;
-  border: 1px solid #00000090;
+  border: 1px solid #2b2b2b;
 }
 
 .sound {
   cursor: pointer;
   background: white;
-  border: 2px solid black;
+  border: 2px solid #2b2b2b;
   border-radius: 8px;
   margin: 4px;
   height: 48px;
