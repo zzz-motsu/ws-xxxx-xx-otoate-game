@@ -21,6 +21,10 @@ Expressを使用した簡易的なWeb APIを作成してフロントエンドと
 
 - [MVCモデルとは！概念やそのメリットをわかりやすく解説！](https://www.geekly.co.jp/column/cat-technology/1911_040/)
 
+#### HTTPについて
+
+- [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
+
 #### Webアプリケーションフレームワーク
 
 - [フレームワークとは？今更聞けないWebフレームワークを始めから丁寧に](https://blog.codecamp.jp/web_framework)
@@ -42,10 +46,6 @@ Expressを使用した簡易的なWeb APIを作成してフロントエンドと
 #### Promise async, wait
 
 - [Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
-
-#### HTTPについて
-
-- [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
 
 #### ORM(オブジェクトリレーショナルマッッピング)
 
