@@ -67,7 +67,7 @@ Gitが初めての方は下記を参照ください。
 フロント側は下記READMEを参照してください
 
 - [フロント - JavaScript](./front-js/README.md)
-- [フロント - React](./front-react/README.md)
+- ~フロント - React~
 
 サーバ側は下記READMEを参照してください
 
