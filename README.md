@@ -34,6 +34,11 @@ Expressを使用した簡易的なWeb APIを作成してフロントエンドと
 - [RESTful APIとは何なのか](https://qiita.com/NagaokaKenichi/items/0647c30ef596cedf4bf2)
 - [0からREST APIについて調べてみた](https://qiita.com/masato44gm/items/dffb8281536ad321fb08)
 
+#### Fetch APIについて
+
+- [Fetch API について](https://qiita.com/sotasato/items/31be24d6776f3232c0c0)
+- [Fetch の使用](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch)
+
 #### Promise async, wait
 
 - [Promiseの使い方、それに代わるasync/awaitの使い方](https://qiita.com/suin/items/97041d3e0691c12f4974)
