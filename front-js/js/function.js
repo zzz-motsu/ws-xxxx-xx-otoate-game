@@ -38,6 +38,8 @@ const elements = {
   }
 }
 
+const baseURL = 'http://ec2-13-231-255-171.ap-northeast-1.compute.amazonaws.com'
+
 const incrementCount = () => {
   context.count++
 }
@@ -55,7 +57,7 @@ const updatePlayerName = () => {
 }
 
 const updateFinalScore = () => {
-  elements.finalScore = context.score
+  elements.finalScore.innerText = context.score
 }
 
 const updateScoreList = (data, currentScore) => {
@@ -102,7 +104,7 @@ const checkAnswer = (ans) => {
     context.score += 200
     document.getElementById(ans).play()
   } else {
-    context.score = Math.max(score - 30, 0)
+    context.score = Math.max(score - 100, 0)
     wrongAudio.play()
   }
   updateScore()
@@ -192,12 +194,12 @@ const onLoadResultScene = async () => {
 }
 
 const fetchScoreList = async () => {
-  const data = await fetch('http://localhost:3000/scores')
+  const data = await fetch(baseURL + '/scores')
   return await data.json()
 }
 
 const createScore = async (params) => {
-  const data = await fetch('http://localhost:3000/scores', {
+  const data = await fetch(baseURL + '/scores', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
