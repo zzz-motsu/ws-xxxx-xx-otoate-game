@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const dbName = 'otoate'
 const url = 'mongodb://localhost/' + dbName
 
-mongoose.connect(url , {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || url , {useNewUrlParser: true});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
