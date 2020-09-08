@@ -38,7 +38,7 @@ const elements = {
   }
 }
 
-const baseURL = 'http://ec2-13-231-255-171.ap-northeast-1.compute.amazonaws.com'
+const baseURL = 'https://otoate.herokuapp.com'
 
 const incrementCount = () => {
   context.count++
@@ -128,6 +128,10 @@ const moveToResultScene = () => {
 }
 
 const onLoadStartScene = () => {
+  // herokuサーバを起動させるために事前にping
+  ping()
+
+
   elements.startButton.addEventListener('click', () => {
     context.name = elements.input.value
     if (!context.name) {
@@ -191,6 +195,10 @@ const onLoadResultScene = async () => {
   } catch (e) {
     console.error(e)
   }
+}
+
+const ping = () => {
+  fetch(baseURL)
 }
 
 const fetchScoreList = async () => {
