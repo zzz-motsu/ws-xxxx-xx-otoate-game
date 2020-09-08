@@ -47,6 +47,11 @@ Expressを使用した簡易的なWeb APIを作成してフロントエンドと
 
 - [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
 
+#### ORM(オブジェクトリレーショナルマッッピング)
+
+- [もっとORMを使えるようになりたいので、見直してみた](https://qiita.com/niisan-tokyo/items/156eb35c6eeaf07b9b65)
+- [オブジェクト関係マッピング](https://qiita.com/yk-nakamura/items/acd071f16cda844579b9)
+
 ### 2. 課題を始める前にリポジトリ をフォーク
 
 - [GitHubフォークのやり方](https://version-1workspace.gitbook.io/github/how-to-fork)
