@@ -9,83 +9,13 @@
     <div class="container" >
       <h1 class="title">音当てゲーム</h1>
       <div class="start-scene">
-        <div class="row">
-          プレイヤー名:
-          <input class="input" type="text"></input>
-        </div>
-        <div class="row center">
-          <button class="button start-button">スタート</button>
-        </div>
+        <!-- スタート画面 -->
       </div>
       <div class="game-scene is-hidden">
-        <div class="navigation">
-          <div class="row">
-            プレイヤー名:
-            <span class="player-name"></span>
-          </div>
-          <div class="row">
-            <div class="col">
-              スコア:
-              <span class="score"></span>
-            </div>
-            <div class="col">
-              <span class="answer-count"></span>
-              /
-              <span class="problem-count">5</span>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="main-screen">
-            <div class="play">
-              <div class="play-logo">
-              ▶︎
-              </div>
-            </div>
-            <audio id="player" src=""></audio>
-          </div>
-          <div class="buttons">
-            <div class="row space-evenly">
-              <button class="sound" data-key="01_do">ド</button>
-              <button class="sound" data-key="02_re">レ</button>
-              <button class="sound" data-key="03_mi">ミ</button>
-              <button class="sound" data-key="04_fa">ファ</button>
-            </div>
-            <div class="row space-evenly">
-              <button class="sound" data-key="05_so">ソ</button>
-              <button class="sound" data-key="06_ra">ラ</button>
-              <button class="sound" data-key="07_shi">シ</button>
-            </div>
-          </div>
-          <div>
-            <audio id="01_do" src="assets/mp3/01_do.mp3"></audio>
-            <audio id="02_re" src="assets/mp3/02_re.mp3"></audio>
-            <audio id="03_mi" src="assets/mp3/03_mi.mp3"></audio>
-            <audio id="04_fa" src="assets/mp3/04_fa.mp3"></audio>
-            <audio id="05_so" src="assets/mp3/05_so.mp3"></audio>
-            <audio id="06_ra" src="assets/mp3/06_ra.mp3"></audio>
-            <audio id="07_shi" src="assets/mp3/07_shi.mp3"></audio>
-          </div>
-          <div>
-            <audio id="wrong" src="assets/mp3/wrong.mp3"></audio>
-          </div>
-        </div>
+        <!-- ゲーム画面 -->
       </div>
       <div class="result-scene is-hidden">
-        <div>
-           <h2 class="result-text">ゲーム終了~</h2>
-           <div class="score-result">
-              最終スコア
-              <h2 class="final-score"><h2>
-           </div>
-           <div class="score-list-container">
-             <ul class="score-list">
-             </ul>
-           </div>
-           <div>
-             <button class="button restart">再挑戦</button>
-           </div>
-        </div>
+        <!-- 結果画面 -->
       </div>
     </div>
     <script type="text/javascript" src="js/function.js"></script>
