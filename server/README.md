@@ -3,7 +3,7 @@
 
 本課題ではMongo DBを使って課題を進めるのでMongoのインストールが必要です。
 
-- mongodbの登録
+- mongodbのインストール
 
 ```console
 $ brew tap mongodb/brew
