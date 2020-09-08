@@ -8,13 +8,9 @@ brew tap mongodb/brew
 brew install mongodb-community@4.4
 ```
 
-https://qiita.com/FrogWoman/items/f8a70286c7f1c4d5fc02
 
-https://expressjs.com/ja/
+## 補足記事
 
-
-https://mongoosejs.com/docs/index.html
-
-https://qiita.com/saba1024/items/f2ad56f2a3ba7aaf8521
-
-https://qiita.com/ktanaka117/items/596febd96a63ae1431f8
+[mongoose | 公式](https://mongoosejs.com/docs/index.html)
+[MongoDB 超入門](https://qiita.com/saba1024/items/f2ad56f2a3ba7aaf8521_)
+[node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
