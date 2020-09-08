@@ -1,4 +1,10 @@
 
+## 使用パッケージ
+
+- express
+- mongoose
+
+
 ##  Mongo DBのインストール
 
 本課題ではMongo DBを使って課題を進めるのでMongoのインストールが必要です。
