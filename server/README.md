@@ -24,5 +24,5 @@ $ brew services start mongodb-community
 
 ## 補足記事
 
-[mongoose | 公式](https://mongoosejs.com/docs/index.html)
-[node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
+- [mongoose | 公式](https://mongoosejs.com/docs/index.html)
+- [node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
