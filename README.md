@@ -39,6 +39,8 @@ README.md
 - [Webフレームワークとは何か](https://postd.cc/what-is-a-web-framework/)
 - [Express.js公式ドキュメント](https://expressjs.com/ja/)
 - [Express のインストール - Express.js](https://expressjs.com/ja/starter/installing.html)
+- [Node.jsとexpressを使って簡単なWebAPIを作成する - Qiita](https://qiita.com/s_harada/items/8e9413b981cfbff4db2d)
+- [node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
 
 #### REST APIについて
 - [HTTPリクエスト/レスポンスの構成要素を初心者にも分かるように解説してみた](https://qiita.com/koheiyamaguchi0203/items/5777c4653a01ae4c7b06)
