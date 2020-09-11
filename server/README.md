@@ -34,5 +34,3 @@ $ brew services start mongodb-community
 - [mongoose | 公式](https://mongoosejs.com/docs/index.html)
 - [Node.jsを使ってWebアプリケーションを作るための流れ - 事前知識 & ベタ書きで書いてみる 編 - - Qiita](https://qiita.com/don-bu-rakko/items/b74b9a353ecaf7ac54a8)
 - [Node.js用MongoDBライブラリ mongooseの基本操作まとめ（すぐ試せるサンプル付き）](https://qiita.com/takehilo/items/4b89f8ee432b0a06c691)
-- [Node.jsとexpressを使って簡単なWebAPIを作成する - Qiita](https://qiita.com/s_harada/items/8e9413b981cfbff4db2d)
-- [node.js + expressでPOSTを受け取る & POSTパラメータをJSONで取得する](https://qiita.com/ktanaka117/items/596febd96a63ae1431f8)
