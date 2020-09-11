@@ -25,7 +25,7 @@ $ brew services start mongodb-community
 
 その他操作は下記記事参照ください。
 
-[MongoDB 超入門](https://qiita.com/saba1024/items/f2ad56f2a3ba7aaf8521_)
+[MongoDB 超入門](https://qiita.com/saba1024/items/f2ad56f2a3ba7aaf8521)
 
 
 ## 補足記事
