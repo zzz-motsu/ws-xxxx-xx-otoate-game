@@ -154,14 +154,38 @@ const onLoadResultScene = async () => {
 
   // スコアの保存・取得
   // TODO: スコア保存・スコア一覧の表示部分を実装してください
+    const record = await createScore({
+      name,
+      score
+    })
+    const data = await fetchScoreList()
+    updateScoreList(data, record)
 }
 
 const fetchScoreList = async () => {
+  const data = await fetch('http://localhost:3000/scores')
+  return await data.json()
 }
 
 const createScore = async (params) => {
+  const data = await fetch('http://localhost:3000/scores', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(params)
+  })
+  return await data.json()
 }
 
+// const fetchText = async () => {
+//   const res = await fetch('http://localhost:3000/scores')
+//   const data = await res.json()
+//   debugger
+// }
+
 const init = onLoadStartScene
+
+// fetchText()
 
 init()
