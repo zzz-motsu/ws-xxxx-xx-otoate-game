@@ -19,7 +19,8 @@ app.get('/scores', (req, res) => {
 })
 
 app.post('/scores', (req, res) => {
-  res.json({})
+  console.log(req.body);
+  res.send("Received POST Data!");
 })
 
 app.listen(port, () => {
