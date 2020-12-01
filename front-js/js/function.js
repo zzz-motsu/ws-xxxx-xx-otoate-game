@@ -157,8 +157,6 @@ const onLoadResultScene = async () => {
 }
 
 const fetchScoreList = async () => {
-  const data = await fetch('http://localhost:3000/scores')
-  return await data.json()
 }
 
 const createScore = async (params) => {
