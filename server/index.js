@@ -2,8 +2,12 @@ const express = require('express')
 const app = express()
 const { db, Score } = require('./models')
 const port = 3000
+const bodyParser = require('body-parser');
 
-const scoreSchema = models.scoreSchema;
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 
 // CORSを許可する
 app.use(function(req, res, next) {
@@ -22,21 +26,16 @@ app.get('/scores', (req, res) => {
 
 app.post('/scores', (req, res) => {
   console.log(req.body);
-  res.send("Received POST Data!");
+    res.json({})
+  })
+
+const record = new Score();
+record.name = req.body.name;
+record.age = req.body.age;
+
+record.save(function(err){
+  if(err) throw err;
 })
-
-var record = new scoreSchema({
-  brand: '醸し人九平次',
-  type: 9,
-  impressions: [
-    { temperature: 7, impression: 'めちゃうま' },
-    { temperature: 10, impression: '激うま' }
-  ]
-});
-
-record.save(function(err) {
-  if (err) throw err;
-});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

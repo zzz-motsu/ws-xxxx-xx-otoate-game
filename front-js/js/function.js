@@ -153,25 +153,13 @@ const onLoadResultScene = async () => {
   updateFinalScore()
 
   // スコアの保存・取得
-  // TODO: スコア保存・スコア一覧の表示部分を実装してください
-    // const record = await createScore({
-    //   name,
-    //   score
-    // })
 }
 
 const fetchScoreList = async () => {
 }
 
 const createScore = async (params) => {
-  // const data = await fetch('http://localhost:3000/scores', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify(params)
-  // })
-  // return await data.json()
+ 
 }
 
 const fetchText = async () => {
@@ -181,7 +169,5 @@ const fetchText = async () => {
 }
 
 const init = onLoadStartScene
-
-// fetchText()
 
 init()
