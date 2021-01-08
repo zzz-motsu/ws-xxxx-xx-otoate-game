@@ -26,16 +26,17 @@ app.get('/scores', (req, res) => {
 
 app.post('/scores', (req, res) => {
   console.log(req.body);
+  const record = new Score();
+  record.name = req.body.name;
+  record.age = req.body.age;
+
+  record.save(function(err){
+    if(err) throw err;
     res.json({})
   })
-
-const record = new Score();
-record.name = req.body.name;
-record.age = req.body.age;
-
-record.save(function(err){
-  if(err) throw err;
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

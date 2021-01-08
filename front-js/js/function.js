@@ -59,6 +59,32 @@ const updateFinalScore = () => {
 
 const updateScoreList = (data, currentScore) => {
   // TODO: スコア一覧の表示部分を実装してください
+  data.forEach((item, index) => {
+    const li = document.createElement('li')
+    li.classList.add('score-item')
+    li.innerHTML = `
+      <div>
+        <p>
+          ${index+1}. ${item.name}
+        </p>
+      </div>
+      <div class="score-result">
+        <p>
+          ${item.score}
+        </p>
+      </div>
+    `
+    if (item._id === currentScore._id) {
+      li.classList.add('current')
+      setTimeout(() => {
+        li.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      }, 500)
+    }
+    elements.scoreList.appendChild(li)
+  })
 }
 
 const makeQuestion = () => {
@@ -153,19 +179,36 @@ const onLoadResultScene = async () => {
   updateFinalScore()
 
   // スコアの保存・取得
+  try {
+    const record = await createScore({
+      name,
+      score
+    })
+    const data = await fetchScoreList()
+    updateScoreList(data, record)
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+const ping = () => {
+  fetch('http://localhost:3000/scores')
 }
 
 const fetchScoreList = async () => {
+  const res = await fetch('http://localhost:3000/scores')
+  const data = await res.json()
 }
 
 const createScore = async (params) => {
- 
-}
-
-const fetchText = async () => {
-  const res = await fetch('http://localhost:3000/scores')
-  const data = await res.json()
-  debugger
+  const data = await fetch('http://localhost:3000/scores', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(params)
+  })
+  return await data.json()
 }
 
 const init = onLoadStartScene
