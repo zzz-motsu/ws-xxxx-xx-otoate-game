@@ -28,7 +28,7 @@ app.post('/scores', (req, res) => {
   console.log(req.body);
   const record = new Score();
   record.name = req.body.name;
-  record.age = req.body.age;
+  record.score = req.body.score;
 
   record.save(function(err){
     if(err) throw err;

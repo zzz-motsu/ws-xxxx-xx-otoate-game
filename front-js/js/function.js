@@ -197,7 +197,7 @@ const ping = () => {
 
 const fetchScoreList = async () => {
   const res = await fetch('http://localhost:3000/scores')
-  const data = await res.json()
+  return await res.json()
 }
 
 const createScore = async (params) => {
