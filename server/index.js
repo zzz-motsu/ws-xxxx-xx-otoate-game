@@ -16,6 +16,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.json({message: "ok" })
+})
+
 app.get('/scores', (req, res) => {
   Score.find({}, function(err, result){
     if (err) throw err;
@@ -35,8 +39,6 @@ app.post('/scores', (req, res) => {
     res.json({})
   })
 })
-
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
