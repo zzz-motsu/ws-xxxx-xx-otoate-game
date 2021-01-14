@@ -1,1 +1,1 @@
-web: node app/app.js
+cd server && yarn start
