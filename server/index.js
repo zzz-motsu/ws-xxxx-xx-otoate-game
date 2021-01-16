@@ -17,9 +17,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.get('/', (req, res) => {
-//   res.json({message: "ok" })
-// })
+app.get('/', (req, res) => {
+  res.json({message: "ok" })
+})
 
 app.get('/scores', (req, res) => {
   Score.find({}, function(err, result){
