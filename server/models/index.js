@@ -1,6 +1,13 @@
 var mongoose = require('mongoose');
 // var constants = require('./lib/constants');
-mongoose.connect('mongodb://localhost/otoate', { useNewUrlParser: true });
+
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true,
+  useFindAndModify: false
+});
+
+// mongoose.connect('mongodb://localhost/otoate', { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
