@@ -23,6 +23,10 @@ app.use(function(req, res, next) {
 
 app.use(express.static('front-js'));
 
+app.get("/", (req, res) =>{
+  res.sendFile(__dirname + "/index.html");
+});
+
 app.get('/scores', (req, res) => {
   Score.find({}, function(err, result){
     if (err) throw err;
