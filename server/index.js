@@ -21,6 +21,8 @@ app.use(function(req, res, next) {
 //   res.json({message: "ok" })
 // })
 
+app.use(express.static('front-js'));
+
 app.get("/", (req, res) =>{
   res.sendFile(__dirname + "/front-js/index.html");
 });
