@@ -191,10 +191,6 @@ const onLoadResultScene = async () => {
   }
 }
 
-const ping = () => {
-  fetch('http://localhost:3000/scores')
-}
-
 const fetchScoreList = async () => {
   const res = await fetch('https://otoate-game.herokuapp.com/scores')
   return await res.json()
