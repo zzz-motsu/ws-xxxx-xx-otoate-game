@@ -22,7 +22,7 @@ app.use(function(req, res, next) {
 // })
 
 app.get("/", (req, res) =>{
-  res.sendFile(`${__dirname}/front-js/index.html`);
+  res.sendFile(`${__dirname}/../front-js/index.html`);
 });
 
 app.get('/scores', (req, res) => {
