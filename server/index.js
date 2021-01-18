@@ -21,7 +21,9 @@ app.use(function(req, res, next) {
 //   res.json({message: "ok" })
 // })
 
-app.use(express.static(path.join(__dirname, 'front-js')));
+app.get("/", (req, res) =>{
+  res.sendFile(`${__dirname}/front-js/index.html`);
+});
 
 app.get('/scores', (req, res) => {
   Score.find({}, function(err, result){
