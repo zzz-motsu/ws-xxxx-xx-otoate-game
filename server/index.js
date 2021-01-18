@@ -17,10 +17,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.get('/', (req, res) => {
-//   res.json({message: "ok" })
-// })
-
 app.use(express.static(__dirname + '/../front-js')); 
 
 app.get('/scores', (req, res) => {

@@ -196,12 +196,12 @@ const ping = () => {
 }
 
 const fetchScoreList = async () => {
-  const res = await fetch('http://localhost:3000/scores')
+  const res = await fetch('https://otoate-game.herokuapp.com/scores')
   return await res.json()
 }
 
 const createScore = async (params) => {
-  const data = await fetch('http://localhost:3000/scores', {
+  const data = await fetch('https://otoate-game.herokuapp.com/scores', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
